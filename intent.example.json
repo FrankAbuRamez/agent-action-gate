@@ -1,0 +1,1 @@
+{"action": "issue_refund", "params": {"order": "A-1001", "amount": 250}, "agent": "support-bot"}

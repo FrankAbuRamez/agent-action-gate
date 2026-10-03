@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+audit.log.jsonl
+KILL_SWITCH
+.env

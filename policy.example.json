@@ -1,0 +1,11 @@
+{
+  "default_tier": "deny",
+  "actions": {
+    "lookup_order":   { "tier": "allow" },
+    "draft_reply":    { "tier": "allow" },
+    "send_email":     { "tier": "approve", "allowed_domains": ["example.com", "customer.example.org"] },
+    "issue_refund":   { "tier": "approve", "max_amount": 200, "daily_limit": 500 },
+    "publish_post":   { "tier": "approve" },
+    "delete_records": { "tier": "deny" }
+  }
+}
