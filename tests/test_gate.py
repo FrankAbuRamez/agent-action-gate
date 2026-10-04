@@ -34,7 +34,7 @@ class GateTests(unittest.TestCase):
     def approved_token(self, intent):
         decision = self.gate.evaluate(intent)
         self.assertEqual(decision.status, NEEDS_APPROVAL)
-        return self.gate.approve(decision.request_id, "Alaa (ops lead)")
+        return self.gate.approve(decision.request_id, "Ops Lead")
 
     # --- policy tiers ---
     def test_low_risk_action_is_allowed_and_runs_without_token(self):
@@ -107,7 +107,7 @@ class GateTests(unittest.TestCase):
         log = self.dir / "audit.jsonl"
         self.assertTrue(verify_log(log)[0])
         lines = log.read_text().splitlines()
-        lines[1] = lines[1].replace("Alaa (ops lead)", "someone else")
+        lines[1] = lines[1].replace("Ops Lead", "someone else")
         log.write_text("\n".join(lines) + "\n")
         ok, message = verify_log(log)
         self.assertFalse(ok)

@@ -2,7 +2,7 @@
 
 A small, fail-closed control layer that sits between an AI agent and the real world. Every action an agent proposes is checked against a policy **before** it runs: low-risk actions pass, risky ones wait for a named human, and anything unknown or over limit is refused. Every decision lands in a tamper-evident audit log.
 
-Built by **Alaa Atassi** after watching an autonomous agent take a money-moving action it should have stopped and asked about. The lesson: don't trust the next agent more, put the controls outside the agent.
+Built after watching an autonomous agent take a money-moving action it should have stopped and asked about. The lesson: don't trust the next agent more, put the controls outside the agent.
 
 ## What it enforces
 
